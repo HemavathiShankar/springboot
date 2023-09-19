@@ -25,12 +25,12 @@ public class OrderController {
 	 
 	 @PostMapping("/placeOrder")
 	 public ResponseEntity<String> placeOrder(@RequestBody OrderBody ordReq){
-		// System.out.println("in orderservile module used to take order requests");
-		 log.info("in orderservile module used to take order requests");
+		 System.out.println("in orderservile module used to take order requests");
+		 //log.info("in orderservile module used to take order requests");
 		 System.out.println(ordReq);
 		 long orderId=service.placeOrder(ordReq);
 		 log.info("order id"+orderId);
-		return new ResponseEntity<>("order placed "+orderId,HttpStatus.OK);
+		return new ResponseEntity<>("order placed successfully"+orderId,HttpStatus.OK);
 		 
 	 }
 	 @GetMapping("/getOrderDetails/{orderId}")
