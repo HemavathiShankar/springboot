@@ -25,7 +25,7 @@ public class OrderController {
 	 
 	 @PostMapping("/placeOrder")
 	 public ResponseEntity<String> placeOrder(@RequestBody OrderBody ordReq){
-		 System.out.println("in orderservile module");
+		 System.out.println("in orderservile module used to take order requests");
 		 System.out.println(ordReq);
 		 long orderId=service.placeOrder(ordReq);
 		 log.info("order id"+orderId);
